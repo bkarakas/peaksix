@@ -1,4 +1,4 @@
-# Default values for peak6.
+# Default values for peaksix.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -23,7 +23,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - peaksix.domain.com
+  - peaksix.burakkarakas.net
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
