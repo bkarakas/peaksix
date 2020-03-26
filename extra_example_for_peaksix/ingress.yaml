@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-app-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-burakkarakas-prod
+spec:
+  rules:
+  - host: nginx-app.burakkarakas.net
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-app-service
+          servicePort: http
+  tls: 
+  - hosts:
+    - nginx-app.burakkarakas.net
+    secretName: nginx-app-burakkarakas-tls
+     
